@@ -1,0 +1,39 @@
+{
+	"bsonType": "object",
+	"description": "壁纸",
+	"required": ["url", "categoryIds"],
+	"permission": {
+		"read": true,
+		"create": false,
+		"update": false,
+		"delete": false
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"title": {
+			"description": "分类",
+			"bsonType": "string"
+		},
+		"desc": {
+			"description": "描述",
+			"bsonType": "string"
+		},
+		"url": {
+			"description": "图片地址",
+			"bsonType": "string"
+		},
+		"categoryIds": {
+			"description": "分类id数组[1,2,3]",
+			"bsonType": "array",
+			"arrayType": "string",
+			"defaultValue": []
+		},
+		"status": {
+			"description": "状态 0-停用 1-可用",
+			"bsonType": "int",
+			"defaultValue": 1
+		}
+	}
+}
